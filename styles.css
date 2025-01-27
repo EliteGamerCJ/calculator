@@ -24,26 +24,43 @@ body {
     text-align: right;
     padding: 20px;
     font-size: 2em;
+    border-bottom: 1px solid #444;
 }
 
 .buttons {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
 }
 
 .btn {
     padding: 20px;
     font-size: 1.5em;
-    border: 1px solid #ccc;
-    background-color: #fff;
+    border: none;
+    background-color: #333;
+    color: #fff;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.1s ease;
 }
 
 .btn:hover {
-    background-color: #f0f0f0;
+    background-color: #555;
 }
 
 .btn:active {
-    background-color: #ddd;
+    background-color: #777;
+    transform: scale(0.95);
+}
+
+.btn.special {
+    background-color: #444;
+}
+
+.btn.special:hover {
+    background-color: #666;
+}
+
+.btn.special:active {
+    background-color: #888;
+    transform: scale(0.95);
 }
