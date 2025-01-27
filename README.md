@@ -1,1 +1,1 @@
-# a siple calculator
+# a simple calculator
