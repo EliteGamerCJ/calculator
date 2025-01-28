@@ -1,20 +1,22 @@
 document.addEventListener('keydown', function(event) {
     const key = event.key;
+    const code = event.code;
+
     if (!isNaN(key) || ['+', '-', '*', '/', '.', '^'].includes(key)) {
         appendToDisplay(key);
-    } else if (key === 'Enter') {
+    } else if (code === 'Enter' || code === 'NumpadEnter') {
         calculateResult();
-    } else if (key === 'Backspace') {
+    } else if (code === 'Backspace') {
         deleteLast();
-    } else if (key === 'Escape') {
+    } else if (code === 'Escape') {
         clearDisplay();
-    } else if (key === 's') {
+    } else if (code === 'KeyS') {
         appendToDisplay('sin');
-    } else if (key === 'c') {
+    } else if (code === 'KeyC') {
         appendToDisplay('cos');
-    } else if (key === 't') {
+    } else if (code === 'KeyT') {
         appendToDisplay('tan');
-    } else if (key === 'r') {
+    } else if (code === 'KeyR') {
         appendToDisplay('sqrt');
     }
 });
